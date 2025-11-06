@@ -186,6 +186,6 @@ int main() {
     // Fin del programa
     // -------------------------------------------------
     cout << "\n✅ Fin del programa. Memoria liberada correctamente.\n";
-
+    cout << endl;
     return 0;
 }

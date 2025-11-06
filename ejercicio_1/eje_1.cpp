@@ -90,6 +90,6 @@ int main() {
     cout << "Magnitud de A: " << vectorA.magnitud() << endl;
     vectorA.normalizar();
     cout << "Vector A normalizado: " << vectorA << endl << endl; // ← línea en blanco final
-
+    cout << endl;
     return 0;
 }
