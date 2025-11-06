@@ -1,10 +1,11 @@
+
 # 🎲 Juego de Dominó
 
 Implementación del juego de dominó en C++ utilizando Programación Orientada a Objetos. Este programa permite que de 2 a 4 jugadores humanos jueguen dominó en la consola.
 
 ---
 
-## 📋 Contenido
+# 📋 Contenido
 
 1. [Cómo Compilar](#-cómo-compilar-el-juego)
 2. [Cómo Ejecutar](#-cómo-ejecutar-el-juego)
@@ -14,17 +15,17 @@ Implementación del juego de dominó en C++ utilizando Programación Orientada a
 
 ---
 
-## 🔨 Cómo Compilar el Juego
+# 🔨 Cómo Compilar el Juego
 
 El programa requiere un compilador de C++ compatible con el estándar C++17 o superior.
 
 ---
 
-## 🔨 Cómo Compilar el Juego
+# 🔨 Cómo Compilar el Juego
 
 El programa requiere un compilador de C++ compatible con el estándar C++17 o superior.
 
-### En Linux o macOS
+## En Linux o macOS
 
 Abre una terminal en la carpeta donde se encuentra el archivo `eje_6.cpp` y ejecuta:
 
@@ -32,7 +33,7 @@ Abre una terminal en la carpeta donde se encuentra el archivo `eje_6.cpp` y ejec
 g++ -std=c++17 eje_6.cpp -o juego
 ```
 
-### En Windows con MinGW
+## En Windows con MinGW
 
 Abre el símbolo del sistema (CMD) o PowerShell en la carpeta del archivo y ejecuta:
 
@@ -40,7 +41,7 @@ Abre el símbolo del sistema (CMD) o PowerShell en la carpeta del archivo y ejec
 g++ -std=c++17 eje_6.cpp -o juego.exe
 ```
 
-### En Windows con Visual Studio
+## En Windows con Visual Studio
 
 ```bash
 cl /EHsc /std:c++17 eje_6.cpp
@@ -50,17 +51,17 @@ cl /EHsc /std:c++17 eje_6.cpp
 
 ---
 
-## ▶️ Cómo Ejecutar el Juego
+# ▶️ Cómo Ejecutar el Juego
 
 Una vez compilado correctamente, ejecuta el programa:
 
-### En Linux o macOS
+## En Linux o macOS
 
 ```bash
 ./juego
 ```
 
-### En Windows
+## En Windows
 
 ```bash
 juego.exe
@@ -72,31 +73,31 @@ El programa te guiará paso a paso a través del menú interactivo.
 
 ---
 
-## 📖 Reglas Básicas del Dominó
+# 📖 Reglas Básicas del Dominó
 
-### Objetivo del Juego
+## Objetivo del Juego
 
 El objetivo es **ser el primer jugador en quedarse sin piezas** o, en caso de bloqueo, **tener la menor suma de puntos** en las piezas restantes.
 
-### Componentes del Juego
+## Componentes del Juego
 
 - **28 piezas de dominó** numeradas del 0 al 6 en cada lado
 - Las piezas van desde [0|0] hasta [6|6]
 - Cada pieza tiene dos lados con valores numéricos
 
-### Inicio de la Partida
+## Inicio de la Partida
 
 1. **Número de jugadores:** De 2 a 4 jugadores
 2. **Distribución:** Cada jugador recibe **7 piezas** al inicio
 3. **El pozo:** Las piezas restantes se colocan boca abajo formando el "pozo"
 
-### Desarrollo del Juego
+## Desarrollo del Juego
 
-#### Primera Jugada
+### Primera Jugada
 - El primer jugador coloca cualquier pieza de su mano en el centro de la mesa
 - Esta pieza establece los dos extremos del tablero
 
-#### Turnos Sucesivos
+### Turnos Sucesivos
 
 En cada turno, el jugador debe:
 
@@ -112,7 +113,7 @@ En cada turno, el jugador debe:
    - Debes **robar del pozo** hasta obtener una pieza jugable
    - Si el pozo está vacío y no puedes jugar, **pasas tu turno**
 
-### Condiciones de Victoria
+## Condiciones de Victoria
 
 **Victoria Normal:**
 - Un jugador **coloca su última pieza** y se queda sin piezas en la mano
@@ -123,13 +124,13 @@ En cada turno, el jugador debe:
 - Gana el jugador con **menor suma de puntos** en sus piezas restantes
 - Los puntos de cada pieza son la suma de sus dos lados
 
-### Sistema de Puntuación
+## Sistema de Puntuación
 
 - El **ganador de la ronda** recibe puntos igual a la **suma total de todas las piezas** que quedaron en manos de los demás jugadores
 - Los puntos se **acumulan** entre rondas
 - El jugador con más puntos acumulados al final de varias rondas es el ganador general
 
-### Reglas Importantes
+## Reglas Importantes
 
 ✅ Solo puedes jugar piezas que coincidan con los extremos disponibles  
 ✅ Debes robar del pozo si no tienes piezas jugables  
@@ -138,13 +139,13 @@ En cada turno, el jugador debe:
 
 ---
 
-## 🎮 Guía de Uso del Programa
+# 🎮 Guía de Uso del Programa
 
 ---
 
-## 🎮 Guía de Uso del Programa
+# 🎮 Guía de Uso del Programa
 
-### Paso 1: Configuración Inicial
+## Paso 1: Configuración Inicial
 
 Al ejecutar el programa, verás:
 
@@ -165,7 +166,7 @@ Nombre del jugador 2: Pedro
 Nombre del jugador 3: María
 ```
 
-### Paso 2: Durante Tu Turno
+## Paso 2: Durante Tu Turno
 
 Cuando sea tu turno, verás:
 
@@ -183,7 +184,7 @@ Mano de Ana (6):
  5: [3|1]
 ```
 
-#### Opciones Disponibles
+### Opciones Disponibles
 
 El programa te mostrará un menú:
 
@@ -220,7 +221,7 @@ Ana colocó [3|5] ... [2|6]
 **Tecla [x] - Pasar Voluntariamente:**
 - Decides no jugar aunque tengas piezas disponibles
 
-### Paso 3: Robo Automático del Pozo
+## Paso 3: Robo Automático del Pozo
 
 Si no tienes ninguna pieza que puedas jugar, el programa automáticamente:
 1. Te informará que no tienes jugadas válidas
@@ -238,7 +239,7 @@ Si el pozo está vacío y no puedes jugar, pasarás automáticamente:
 Ana no puede jugar y el pozo está vacío. Hace PASS.
 ```
 
-### Paso 4: Fin de la Ronda
+## Paso 4: Fin de la Ronda
 
 La ronda termina cuando:
 - **Un jugador se queda sin piezas:** Gana inmediatamente
@@ -256,7 +257,7 @@ Ana obtiene 35 puntos de esta ronda.
 ==========================
 ```
 
-### Paso 5: Opciones Post-Ronda
+## Paso 5: Opciones Post-Ronda
 
 Después de cada ronda, puedes elegir:
 
@@ -276,9 +277,9 @@ Elija una opción:
 
 ---
 
-## 🔧 Características Técnicas
+# 🔧 Características Técnicas
 
-### Estructura del Código (POO)
+## Estructura del Código (POO)
 
 El programa implementa **Programación Orientada a Objetos** con los siguientes componentes:
 
@@ -302,7 +303,7 @@ El programa implementa **Programación Orientada a Objetos** con los siguientes 
 - Gestiona turnos, puntuación y rondas
 - Detecta condiciones de victoria y bloqueo
 
-### Principios de POO Aplicados
+## Principios de POO Aplicados
 
 ✅ **Encapsulación:** Atributos privados con acceso controlado  
 ✅ **Herencia:** `ParticipanteHumano` hereda de `Participante`  
@@ -320,7 +321,7 @@ El programa implementa **Programación Orientada a Objetos** con los siguientes 
 
 ---
 
-## 📝 Notas Importantes
+# 📝 Notas Importantes
 
 1. **Compatibilidad de Caracteres:**  
    El programa incluye configuración automática para UTF-8 en Windows, permitiendo el uso correcto de tildes y caracteres especiales.
@@ -339,13 +340,13 @@ El programa implementa **Programación Orientada a Objetos** con los siguientes 
 
 ---
 
-## 📄 Licencia
+# 📄 Licencia
 
 Este proyecto es de código abierto y fue desarrollado con fines educativos para demostrar conceptos de Programación Orientada a Objetos en C++.
 
 ---
 
-## 👨‍💻 ** Autor **
+# 👨‍💻 ** Autor **
 
 Desarrollado como proyecto académico de POO.
 
