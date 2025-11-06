@@ -1,0 +1,285 @@
+🎲 Juego de Dominó en C++
+Sistema completo de juego de dominó implementado con Programación Orientada a Objetos en C++.
+📋 Características
+
+✅ Soporte para 2-4 jugadores humanos
+✅ Sistema de puntuación y victorias
+✅ Distribución aleatoria de 28 fichas
+✅ Interfaz de consola intuitiva
+✅ Detección automática de bloqueos
+✅ Múltiples partidas sin reiniciar el programa
+✅ Manejo completo de casos especiales
+
+🏗️ Estructura del Código
+Clase Ficha
+Representa una ficha de dominó con dos valores numéricos.
+Atributos:
+
+lado1, lado2: Valores numéricos de cada extremo
+
+Métodos principales:
+
+puedeConectar(int numero): Verifica si la ficha puede conectarse
+obtenerLadoOpuesto(int lado): Devuelve el lado opuesto
+voltear(): Intercambia los lados de la ficha
+mostrar(): Visualiza la ficha en formato [X|Y]
+
+Clase Jugador
+Representa a un jugador con su estado y fichas.
+Atributos:
+
+nombre: Nombre del jugador
+mano: Vector de fichas que posee
+victorias: Contador de victorias acumuladas
+
+Métodos principales:
+
+recibirFicha(Ficha): Agrega una ficha a la mano
+jugarFicha(int indice): Remueve y devuelve una ficha
+tieneFichaValida(extremoIzq, extremoDer): Verifica si puede jugar
+calcularPuntosRestantes(): Suma los puntos de las fichas restantes
+
+Clase JuegoDomino
+Gestiona el flujo completo del juego.
+Atributos:
+
+jugadores: Vector de jugadores participantes
+mesa: Vector de fichas colocadas
+fichasDisponibles: Pool inicial de fichas
+turnoActual: Índice del jugador en turno
+
+Métodos principales:
+
+crearFichas(): Genera las 28 fichas del dominó
+mezclarFichas(): Aleatoriza el orden de las fichas
+distribuirFichas(): Reparte fichas a los jugadores
+jugarTurno(): Procesa el turno de un jugador
+hayMovimientosPosibles(): Detecta bloqueos
+
+🎮 Reglas del Dominó
+Objetivo
+Ser el primer jugador en colocar todas sus fichas o tener menos puntos en caso de bloqueo.
+Distribución de Fichas
+
+2 jugadores: 7 fichas cada uno
+3 jugadores: 6 fichas cada uno
+4 jugadores: 6 fichas cada uno
+
+Mecánica del Juego
+
+Primera jugada: El primer jugador coloca cualquier ficha en la mesa
+Turnos siguientes: Los jugadores deben conectar una ficha con uno de los extremos disponibles
+Conexión: Los números deben coincidir (ej: [3|5] puede conectarse con un extremo que tenga 3 o 5)
+Pasar turno: Si un jugador no tiene fichas válidas, pierde su turno
+Victoria: El primer jugador en quedarse sin fichas gana
+Bloqueo: Si nadie puede jugar, gana quien tenga menos puntos totales en sus fichas
+
+Sistema de Puntuación
+
+Cada victoria incrementa el contador de victorias del jugador
+El marcador se mantiene entre múltiples partidas
+
+🔧 Compilación y Ejecución
+Requisitos
+
+Compilador C++ compatible con C++11 o superior
+Sistema operativo: Windows, Linux o macOS
+
+Compilación
+En Linux/macOS:
+bashg++ -std=c++11 domino.cpp -o domino
+./domino
+En Windows (con MinGW):
+bashg++ -std=c++11 domino.cpp -o domino.exe
+domino.exe
+En Windows (con Visual Studio):
+bashcl /EHsc domino.cpp
+domino.exe
+Alternativa con Make
+Puedes crear un archivo Makefile:
+makefileCXX = g++
+CXXFLAGS = -std=c++11 -Wall
+
+domino: domino.cpp
+	$(CXX) $(CXXFLAGS) domino.cpp -o domino
+
+clean:
+	rm -f domino
+Luego ejecutar:
+bashmake
+./domino
+🎯 Guía de Uso
+1. Inicio del Juego
+Al ejecutar el programa:
+
+Ingresa el número de jugadores (2-4)
+Escribe el nombre de cada jugador
+
+2. Menú Principal
+Opciones disponibles:
+
+1. Iniciar Nueva Partida: Comienza una nueva ronda
+2. Salir: Cierra el programa
+
+3. Durante la Partida
+Visualización
+El juego muestra:
+
+Estado actual de la mesa
+Extremos disponibles para conectar
+Tu mano de fichas numeradas
+
+Tu Turno
+
+Selecciona el número de la ficha que deseas jugar (1-N)
+Si la ficha puede conectarse en ambos extremos, elige lado (1=Izquierda, 2=Derecha)
+La ficha se coloca automáticamente en la orientación correcta
+
+Casos Especiales
+
+Sin fichas válidas: El turno se pasa automáticamente
+Victoria: El juego termina cuando alguien se queda sin fichas
+Bloqueo: Si nadie puede jugar, gana quien tenga menos puntos
+
+4. Después de la Partida
+
+Se muestra el marcador general con las victorias de cada jugador
+Puedes iniciar una nueva partida desde el menú
+
+💡 Ejemplos de Juego
+Ejemplo 1: Primera Jugada
+MESA DE JUEGO
+(Mesa vacía - Primera jugada)
+
+Jugador 1 - Fichas (7):
+  1. [3|5]
+  2. [2|4]
+  3. [6|6]
+  ...
+
+Selecciona la ficha (1-7): 1
+Ejemplo 2: Jugada Intermedia
+MESA DE JUEGO
+[3|5] [5|2] [2|6]
+Extremos disponibles: [3] ... [6]
+
+Jugador 2 - Fichas (5):
+  1. [3|4]  ← Puede conectarse con [3]
+  2. [1|2]
+  3. [6|5]  ← Puede conectarse con [6]
+  ...
+
+Selecciona la ficha (1-5): 1
+¿Dónde colocar? (1=Izquierda, 2=Derecha): 1
+Ejemplo 3: Victoria
+Ficha colocada exitosamente.
+
+╔════════════════════════════════════════════════════════════╗
+║          ¡Ana HA GANADO LA PARTIDA!                        ║
+╚════════════════════════════════════════════════════════════╝
+
+MARCADOR GENERAL
+Ana: 1 victoria(s)
+Juan: 0 victoria(s)
+🛠️ Principios de POO Aplicados
+✅ Encapsulación
+
+Atributos privados y protegidos con acceso controlado mediante getters
+Validación de datos en los métodos públicos
+Ocultamiento de implementación interna
+
+✅ Herencia
+
+Clase Base Abstracta Participante: Define interfaz común para todos los jugadores
+Clase Derivada JugadorHumano: Hereda de Participante, implementa comportamiento para jugadores humanos
+Clase Derivada JugadorIA: Hereda de Participante, implementa comportamiento para IA con 3 niveles
+Reutilización de código mediante herencia de atributos y métodos comunes
+
+✅ Polimorfismo
+Métodos Virtuales:
+
+decidirJugada(): Método virtual puro que cada tipo de jugador implementa de forma diferente
+getTipo(): Método virtual que identifica el tipo de participante
+mostrarMano(): Método virtual que se comporta diferente según el tipo (Humano muestra fichas, IA las oculta)
+
+Sobrecarga de Operadores:
+
+operator==: Compara fichas
+operator<: Ordena fichas por puntos
+operator<<: Imprime fichas en streams
+
+Polimorfismo en Tiempo de Ejecución:
+
+Vector de shared_ptr<Participante> que almacena diferentes tipos de jugadores
+El mismo código funciona para humanos e IAs gracias al polimorfismo
+
+Abstracción
+
+Interfaces limpias que ocultan la complejidad interna
+Separación clara de responsabilidades entre clases
+
+Modularidad
+
+Cada clase tiene una responsabilidad específica
+Bajo acoplamiento entre componentes
+
+🐛 Manejo de Errores
+El programa incluye manejo robusto de:
+
+✅ Entradas inválidas del usuario
+✅ Índices fuera de rango
+✅ Movimientos ilegales
+✅ Estados de bloqueo
+✅ Validación de datos de entrada
+
+📊 Características Técnicas
+
+Lenguaje: C++11 o superior
+Paradigma: Programación Orientada a Objetos
+Aleatoriedad: std::random_device y std::mt19937
+Estructuras de datos: std::vector
+Complejidad: O(n) para la mayoría de operaciones
+
+🔄 Flujo del Programa
+Inicio
+  ↓
+Configurar Jugadores
+  ↓
+Menú Principal ←──────────┐
+  ↓                        │
+Iniciar Partida           │
+  ↓                        │
+Crear y Mezclar Fichas    │
+  ↓                        │
+Distribuir Fichas         │
+  ↓                        │
+Bucle de Turnos ──────────┤
+  ↓                        │
+¿Victoria o Bloqueo? ─No──┘
+  ↓ Sí
+Mostrar Ganador
+  ↓
+Actualizar Marcador
+  ↓
+Volver al Menú
+📝 Notas Importantes
+
+Interfaz en Consola: La visualización está optimizada para terminales con soporte UTF-8
+Sistema de Puntos: En caso de bloqueo, se suman los valores de todas las fichas restantes
+Múltiples Partidas: Las victorias se acumulan sin necesidad de reiniciar
+Validación: Todos los movimientos son validados antes de ejecutarse
+
+🎓 Propósito Educativo
+Este proyecto demuestra:
+
+Diseño de clases y relaciones
+Gestión de estado del juego
+Implementación de reglas de negocio
+Interacción con usuario mediante consola
+Generación y manejo de aleatoriedad
+Estructuras de datos dinámicas
+
+📄 Licencia
+Proyecto educativo desarrollado para propósitos académicos.
+
+¡Disfruta del juego! 🎲
