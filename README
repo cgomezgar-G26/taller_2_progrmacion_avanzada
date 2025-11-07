@@ -1,17 +1,20 @@
-# 🧮 Taller 2 - Programación Avanzada  
-Este repositorio contiene los ejercicios del **Taller 2: Programación Orientada a Objetos (POO)** en **C++**, desarrollados como parte del curso **Programación Avanzada** de la **Universidad Nacional de Colombia – Sede La Paz**, semestre **2025-2**.  
+# 🧮 Taller 2 - Programación Avanzada
+
+Este repositorio contiene los ejercicios del **Taller 2: Programación Orientada a Objetos (POO)** en **C++**, desarrollados como parte del curso **Programación Avanzada** de la **Universidad Nacional de Colombia – Sede La Paz**, semestre **2025-2**.
+
 El propósito del taller es afianzar los principios fundamentales de la POO mediante la implementación modular de clases, operadores sobrecargados y estructuras interactivas en consola.
 
 ---
 
-## 🎓 Curso y Docente  
+## 🎓 Curso y Docente
 
-**Curso:** Programación Avanzada  
-**Docente:** Mauro Alonso Baquero Suárez, M. Sc. en Automatización y Control  
+**Curso:** Programación Avanzada
+
+**Docente:** Mauro Alonso Baquero Suárez, M. Sc. en Automatización y Control
 
 ---
 
-## 👥 Integrantes del grupo  
+## 👥 Integrantes del grupo
 
 | Nombre completo | Rol | Universidad |
 |------------------|------|-------------|
@@ -21,9 +24,10 @@ El propósito del taller es afianzar los principios fundamentales de la POO medi
 
 ---
 
-## 🧩 Estructura general del taller  
+## 🧩 Estructura general del taller
 
-Cada ejercicio fue implementado en un archivo independiente con su respectiva cabecera y funciones auxiliares.  
+Cada ejercicio fue implementado en un archivo independiente con su respectiva cabecera y funciones auxiliares.
+
 El proyecto completo incluye los siguientes archivos:
 
 ```
@@ -65,6 +69,7 @@ g++ archivo.cpp -o programa
 **Entorno:** Visual Studio Code o cualquier IDE con soporte para C++
 
 **Extensiones recomendadas:**
+
 - C/C++ (Microsoft)
 - Code Runner (opcional, para ejecución rápida)
 
@@ -75,6 +80,7 @@ g++ archivo.cpp -o programa
 Implementación de una clase que modela un vector tridimensional con operaciones aritméticas básicas.
 
 **Características:**
+
 - Constructor para inicializar coordenadas.
 - Cálculo de magnitud y normalización.
 - Sobrecarga de operadores `+`, `-` y `*` (producto escalar).
@@ -82,7 +88,7 @@ Implementación de una clase que modela un vector tridimensional con operaciones
 
 **📘 Conceptos aplicados:** encapsulamiento, sobrecarga de operadores, métodos miembro.
 
-**📂 Archivo:** `eje_1.cpp`
+**📂 Archivo:** `Vector3D.cpp`
 
 ---
 
@@ -91,6 +97,7 @@ Implementación de una clase que modela un vector tridimensional con operaciones
 Clase que representa una matriz cuadrada de tamaño n × n con operaciones matriciales.
 
 **Características:**
+
 - Constructor con inicialización aleatoria.
 - Métodos para transpuesta y multiplicación matricial.
 - Sobrecarga del operador de acceso `()` para indexación.
@@ -98,7 +105,7 @@ Clase que representa una matriz cuadrada de tamaño n × n con operaciones matri
 
 **📘 Conceptos aplicados:** memoria dinámica, encapsulamiento, modularidad, RAII.
 
-**📂 Archivo:** `eje_2.cpp`
+**📂 Archivo:** `Matriz.cpp`
 
 ---
 
@@ -107,6 +114,7 @@ Clase que representa una matriz cuadrada de tamaño n × n con operaciones matri
 Diseño de una clase que representa un polinomio de grado n, con soporte para operaciones algebraicas.
 
 **Características:**
+
 - Constructor que recibe los coeficientes.
 - Método para evaluar el polinomio en un valor `x`.
 - Sobrecarga de operadores `+` y `*` para suma y producto.
@@ -115,7 +123,7 @@ Diseño de una clase que representa un polinomio de grado n, con soporte para op
 
 **📘 Conceptos aplicados:** sobrecarga de operadores, paso de objetos, funciones miembro, POO avanzada.
 
-**📂 Archivo:** `eje_3.cpp`
+**📂 Archivo:** `Polinomio.cpp`
 
 ---
 
@@ -124,6 +132,7 @@ Diseño de una clase que representa un polinomio de grado n, con soporte para op
 Implementación de números complejos en forma binomial y polar, con conversión entre ambas representaciones.
 
 **Características:**
+
 - Clase `Complex` → forma binomial (a + ib)
 - Clase `Polar` → forma polar (a * e^ib)
 - Sobrecarga de operadores `{ +, -, *, /, conj }`
@@ -132,7 +141,7 @@ Implementación de números complejos en forma binomial y polar, con conversión
 
 **📘 Conceptos aplicados:** herencia, funciones de conversión, operadores sobrecargados, modularidad.
 
-**📂 Archivo:** `eje_4.cpp`
+**📂 Archivo:** `Complejos.cpp`
 
 ---
 
@@ -141,6 +150,7 @@ Implementación de números complejos en forma binomial y polar, con conversión
 Simulación de operaciones algebraicas sobre polinomios mediante composición de clases.
 
 **Características:**
+
 - `CTermino`: representa cada término con coeficiente y exponente.
 - `CPolinomio`: almacena un conjunto ordenado de términos.
 - Inserción y ordenamiento automático por exponente.
@@ -149,7 +159,7 @@ Simulación de operaciones algebraicas sobre polinomios mediante composición de
 
 **📘 Conceptos aplicados:** composición, listas dinámicas, sobrecarga de operadores, modularidad en POO.
 
-**📂 Archivo:** `eje_5.cpp`
+**📂 Archivo:** `Ecuaciones.cpp`
 
 ---
 
@@ -158,12 +168,14 @@ Simulación de operaciones algebraicas sobre polinomios mediante composición de
 Desarrollo completo del juego de dominó en consola utilizando principios de POO.
 
 **Clases principales:**
+
 - `Ficha` → modela una ficha con dos valores.
 - `Jugador` → administra las fichas de cada jugador.
 - `Mesa` → controla las fichas jugadas y los extremos.
 - `JuegoDomino` → coordina turnos, reglas, y flujo principal.
 
 **Características del juego:**
+
 - Soporte para 2 a 4 jugadores humanos.
 - Distribución aleatoria de las 28 fichas iniciales.
 - Sistema de turnos y verificación de jugadas válidas.
@@ -175,7 +187,7 @@ Desarrollo completo del juego de dominó en consola utilizando principios de POO
 
 **📘 Conceptos aplicados:** encapsulamiento, herencia, polimorfismo, control de flujo, modularidad, punteros inteligentes.
 
-**📂 Archivo:** `eje_6.cpp`
+**📂 Archivo:** `JuegoDomino.cpp`
 
 ---
 
@@ -191,5 +203,3 @@ Cada ejercicio fue implementado con énfasis en la programación modular, separa
 | 4 | Complejos | Formas binomial/polar | Operadores, conversión |
 | 5 | Polinomios compuestos | Clases enlazadas | Encapsulamiento, listas |
 | 6 | Juego de dominó | Clases interactivas | POO completa, flujo de control |
-
-
