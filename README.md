@@ -83,7 +83,7 @@ Implementación de una clase que modela un vector tridimensional con operaciones
 
 **Conceptos aplicados:** encapsulamiento, sobrecarga de operadores, métodos miembro
 
-**Archivo:** `Vector3D.cpp`
+**Archivo:** `eje_1.cpp`
 
 ---
 
@@ -99,7 +99,7 @@ Clase que representa una matriz cuadrada de tamaño n × n con operaciones matri
 
 **Conceptos aplicados:** memoria dinámica, encapsulamiento, modularidad, RAII
 
-**Archivo:** `Matriz.cpp`
+**Archivo:** `eje_2.cpp`
 
 ---
 
@@ -116,7 +116,7 @@ Diseño de una clase que representa un polinomio de grado n, con soporte para op
 
 **Conceptos aplicados:** sobrecarga de operadores, paso de objetos, funciones miembro, POO avanzada
 
-**Archivo:** `Polinomio.cpp`
+**Archivo:** `eje_3.cpp`
 
 ---
 
@@ -133,7 +133,7 @@ Implementación de números complejos en forma binomial y polar, con conversión
 
 **Conceptos aplicados:** herencia, funciones de conversión, operadores sobrecargados, modularidad
 
-**Archivo:** `Complejos.cpp`
+**Archivo:** `eje_4.cpp`
 
 ---
 
@@ -150,7 +150,7 @@ Simulación de operaciones algebraicas sobre polinomios mediante composición de
 
 **Conceptos aplicados:** composición, listas dinámicas, sobrecarga de operadores, modularidad en POO
 
-**Archivo:** `Ecuaciones.cpp`
+**Archivo:** `eje_5.cpp`
 
 ---
 
@@ -176,7 +176,7 @@ Desarrollo completo del juego de dominó en consola utilizando principios de POO
 
 **Conceptos aplicados:** encapsulamiento, herencia, polimorfismo, control de flujo, modularidad, punteros inteligentes
 
-**Archivo:** `JuegoDomino.cpp`
+**Archivo:** `eje_6.cpp`
 
 ---
 
