@@ -187,8 +187,8 @@ Cada ejercicio fue implementado con énfasis en la programación modular, separa
 | Ejercicio | Tema central | Estructuras clave | Conceptos aplicados |
 |-----------|--------------|-------------------|---------------------|
 | 1 | Vectores 3D | Métodos miembro, operadores | Sobrecarga, encapsulamiento |
-| 2 | Matrices | Arreglos dinámicos | RAII, modularidad, |
+| 2 | Matrices | Arreglos dinámicos | RAII, modularidad, Polimorfismo|
 | 3 | Polinomios | Vectores dinámicos | Herencia, composición , polimorfismos |
 | 4 | Complejos | Formas binomial/polar | Operadores, conversión , construtores, destrutores| 
-| 5 | Polinomios compuestos | Clases enlazadas | Encapsulamiento, listas, polimorfismos, destrutores |
-| 6 | Juego de dominó | Clases interactivas | POO completa, flujo de control|
+| 5 | Polinomios compuestos | Clases enlazadas | Encapsulamiento, listas, polimorfismos, construtores, destructores |
+| 6 | Juego de dominó | Clases interactivas | POO completa, flujo de control, polimorfismos, herencia, construtores, destructores|
