@@ -36,17 +36,13 @@ El proyecto completo incluye los siguientes archivos:
 ├── ejercicio_5/Ecuaciones.cpp
 ├── ejercicio_6/JuegoDomino.cpp
 └── README.md
-
-yaml
-
-
 ---
 
 ## ⚙️ Compilación y ejecución
 
 ### 🔹 En Windows (PowerShell o CMD)
 
-```bash
+```
 g++ archivo.cpp -o programa.exe
 .\programa.exe
 
