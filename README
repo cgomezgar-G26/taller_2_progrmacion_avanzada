@@ -1,4 +1,3 @@
-
 # 🧮 Taller 2 - Programación Avanzada  
 Este repositorio contiene los ejercicios del **Taller 2: Programación Orientada a Objetos (POO)** en **C++**, desarrollados como parte del curso **Programación Avanzada** de la **Universidad Nacional de Colombia – Sede La Paz**, semestre **2025-2**.  
 El propósito del taller es afianzar los principios fundamentales de la POO mediante la implementación modular de clases, operadores sobrecargados y estructuras interactivas en consola.
@@ -7,8 +6,8 @@ El propósito del taller es afianzar los principios fundamentales de la POO medi
 
 ## 🎓 Curso y Docente  
 
-Curso: Programación Avanzada  
-Docente: Mauro Alonso Baquero Suárez, M. Sc. en Automatización y Control  
+**Curso:** Programación Avanzada  
+**Docente:** Mauro Alonso Baquero Suárez, M. Sc. en Automatización y Control  
 
 ---
 
@@ -27,6 +26,7 @@ Docente: Mauro Alonso Baquero Suárez, M. Sc. en Automatización y Control
 Cada ejercicio fue implementado en un archivo independiente con su respectiva cabecera y funciones auxiliares.  
 El proyecto completo incluye los siguientes archivos:
 
+```
 📁 taller_2_programacion_avanzada/
 │
 ├── ejercicio_1/Vector3D.cpp
@@ -36,6 +36,7 @@ El proyecto completo incluye los siguientes archivos:
 ├── ejercicio_5/Ecuaciones.cpp
 ├── ejercicio_6/JuegoDomino.cpp
 └── README.md
+```
 
 ---
 
@@ -43,173 +44,152 @@ El proyecto completo incluye los siguientes archivos:
 
 ### 🔹 En Windows (PowerShell o CMD)
 
-
-```
+```bash
 g++ archivo.cpp -o programa.exe
 .\programa.exe
+```
 
+### 🔹 En Linux o macOS
 
-🔹 En Linux o macOS
-
+```bash
 g++ archivo.cpp -o programa
 ./programa
+```
 
+---
 
-💡 Requisitos
+## 💡 Requisitos
 
-Compilador: g++ (MinGW o MSYS2)
+**Compilador:** g++ (MinGW o MSYS2)
 
-Entorno: Visual Studio Code o cualquier IDE con soporte para C++
+**Entorno:** Visual Studio Code o cualquier IDE con soporte para C++
 
-Extensiones recomendadas:
+**Extensiones recomendadas:**
+- C/C++ (Microsoft)
+- Code Runner (opcional, para ejecución rápida)
 
-C/C++ (Microsoft)
+---
 
-Code Runner (opcional, para ejecución rápida)
-
-📘 Ejercicio 1 – Clase Vector3D (10%)
+## 📘 Ejercicio 1 – Clase Vector3D (10%)
 
 Implementación de una clase que modela un vector tridimensional con operaciones aritméticas básicas.
 
-Características:
+**Características:**
+- Constructor para inicializar coordenadas.
+- Cálculo de magnitud y normalización.
+- Sobrecarga de operadores `+`, `-` y `*` (producto escalar).
+- Método `imprimir()` para mostrar las coordenadas.
 
-Constructor para inicializar coordenadas.
+**📘 Conceptos aplicados:** encapsulamiento, sobrecarga de operadores, métodos miembro.
 
-Cálculo de magnitud y normalización.
+**📂 Archivo:** `eje_1.cpp`
 
-Sobrecarga de operadores +, - y * (producto escalar).
+---
 
-Método imprimir() para mostrar las coordenadas.
-
-📘 Conceptos aplicados: encapsulamiento, sobrecarga de operadores, métodos miembro.
-
-📂 Archivo: Vector3D.cpp
-
-📘 Ejercicio 2 – Clase Matriz (10%)
+## 📘 Ejercicio 2 – Clase Matriz (10%)
 
 Clase que representa una matriz cuadrada de tamaño n × n con operaciones matriciales.
 
-Características:
+**Características:**
+- Constructor con inicialización aleatoria.
+- Métodos para transpuesta y multiplicación matricial.
+- Sobrecarga del operador de acceso `()` para indexación.
+- Destructor para liberar memoria dinámica.
 
-Constructor con inicialización aleatoria.
+**📘 Conceptos aplicados:** memoria dinámica, encapsulamiento, modularidad, RAII.
 
-Métodos para transpuesta y multiplicación matricial.
+**📂 Archivo:** `eje_2.cpp`
 
-Sobrecarga del operador de acceso () para indexación.
+---
 
-Destructor para liberar memoria dinámica.
-
-📘 Conceptos aplicados: memoria dinámica, encapsulamiento, modularidad, RAII.
-
-📂 Archivo: Matriz.cpp
-
-📘 Ejercicio 3 – Clase Polinomio (10%)
+## 📘 Ejercicio 3 – Clase Polinomio (10%)
 
 Diseño de una clase que representa un polinomio de grado n, con soporte para operaciones algebraicas.
 
-Características:
+**Características:**
+- Constructor que recibe los coeficientes.
+- Método para evaluar el polinomio en un valor `x`.
+- Sobrecarga de operadores `+` y `*` para suma y producto.
+- Método `derivar()` que retorna un nuevo objeto Polinomio derivado.
+- Destructor con liberación de memoria dinámica.
 
-Constructor que recibe los coeficientes.
+**📘 Conceptos aplicados:** sobrecarga de operadores, paso de objetos, funciones miembro, POO avanzada.
 
-Método para evaluar el polinomio en un valor x.
+**📂 Archivo:** `eje_3.cpp`
 
-Sobrecarga de operadores + y * para suma y producto.
+---
 
-Método derivar() que retorna un nuevo objeto Polinomio derivado.
-
-Destructor con liberación de memoria dinámica.
-
-📘 Conceptos aplicados: sobrecarga de operadores, paso de objetos, funciones miembro, POO avanzada.
-
-📂 Archivo: Polinomio.cpp
-
-📘 Ejercicio 4 – Clases Complex y Polar (10%)
+## 📘 Ejercicio 4 – Clases Complex y Polar (10%)
 
 Implementación de números complejos en forma binomial y polar, con conversión entre ambas representaciones.
 
-Características:
+**Características:**
+- Clase `Complex` → forma binomial (a + ib)
+- Clase `Polar` → forma polar (a * e^ib)
+- Sobrecarga de operadores `{ +, -, *, /, conj }`
+- Conversión bidireccional entre ambas formas
+- Función `acumula()` para sumar múltiples números complejos o polares.
 
-Clase Complex → forma binomial (a + ib)
+**📘 Conceptos aplicados:** herencia, funciones de conversión, operadores sobrecargados, modularidad.
 
-Clase Polar → forma polar (a * e^ib)
+**📂 Archivo:** `eje_4.cpp`
 
-Sobrecarga de operadores { +, -, *, /, conj }
+---
 
-Conversión bidireccional entre ambas formas
-
-Función acumula() para sumar múltiples números complejos o polares.
-
-📘 Conceptos aplicados: herencia, funciones de conversión, operadores sobrecargados, modularidad.
-
-📂 Archivo: Complejos.cpp
-
-📘 Ejercicio 5 – Clases CTermino y CPolinomio (20%)
+## 📘 Ejercicio 5 – Clases CTermino y CPolinomio (20%)
 
 Simulación de operaciones algebraicas sobre polinomios mediante composición de clases.
 
-Características:
+**Características:**
+- `CTermino`: representa cada término con coeficiente y exponente.
+- `CPolinomio`: almacena un conjunto ordenado de términos.
+- Inserción y ordenamiento automático por exponente.
+- Suma y multiplicación de polinomios con resultado ordenado.
+- Generación de representación en cadena: `4x^3 + 3x^2 - 2x + 7`.
 
-CTermino: representa cada término con coeficiente y exponente.
+**📘 Conceptos aplicados:** composición, listas dinámicas, sobrecarga de operadores, modularidad en POO.
 
-CPolinomio: almacena un conjunto ordenado de términos.
+**📂 Archivo:** `eje_5.cpp`
 
-Inserción y ordenamiento automático por exponente.
+---
 
-Suma y multiplicación de polinomios con resultado ordenado.
-
-Generación de representación en cadena: 4x^3 + 3x^2 - 2x + 7.
-
-📘 Conceptos aplicados: composición, listas dinámicas, sobrecarga de operadores, modularidad en POO.
-
-📂 Archivo: Ecuaciones.cpp
-
-🎮 Ejercicio 6 – Juego de Dominó (40%)
+## 🎮 Ejercicio 6 – Juego de Dominó (40%)
 
 Desarrollo completo del juego de dominó en consola utilizando principios de POO.
 
-Clases principales:
+**Clases principales:**
+- `Ficha` → modela una ficha con dos valores.
+- `Jugador` → administra las fichas de cada jugador.
+- `Mesa` → controla las fichas jugadas y los extremos.
+- `JuegoDomino` → coordina turnos, reglas, y flujo principal.
 
-Ficha → modela una ficha con dos valores.
+**Características del juego:**
+- Soporte para 2 a 4 jugadores humanos.
+- Distribución aleatoria de las 28 fichas iniciales.
+- Sistema de turnos y verificación de jugadas válidas.
+- Mecanismo de bloqueo y condición de victoria.
+- Puntuación acumulativa entre rondas.
+- Interfaz de consola con mensajes claros y coloridos.
+- Reinicio de partida sin cerrar el programa.
+- Comentarios explicativos en todas las clases y métodos.
 
-Jugador → administra las fichas de cada jugador.
+**📘 Conceptos aplicados:** encapsulamiento, herencia, polimorfismo, control de flujo, modularidad, punteros inteligentes.
 
-Mesa → controla las fichas jugadas y los extremos.
+**📂 Archivo:** `eje_6.cpp`
 
-JuegoDomino → coordina turnos, reglas, y flujo principal.
+---
 
-Características del juego:
-
-Soporte para 2 a 4 jugadores humanos.
-
-Distribución aleatoria de las 28 fichas iniciales.
-
-Sistema de turnos y verificación de jugadas válidas.
-
-Mecanismo de bloqueo y condición de victoria.
-
-Puntuación acumulativa entre rondas.
-
-Interfaz de consola con mensajes claros y coloridos.
-
-Reinicio de partida sin cerrar el programa.
-
-Comentarios explicativos en todas las clases y métodos.
-
-📘 Conceptos aplicados: encapsulamiento, herencia, polimorfismo, control de flujo, modularidad, punteros inteligentes.
-
-📂 Archivo: JuegoDomino.cpp
-
-🧱 Metodología general
+## 🧱 Metodología general
 
 Cada ejercicio fue implementado con énfasis en la programación modular, separando la lógica en clases, constructores, métodos y destructores bien definidos.
 
-Ejercicio	Tema central	Estructuras clave	Conceptos aplicados
-1	Vectores 3D	Métodos miembro, operadores	Sobrecarga, encapsulamiento
-2	Matrices	Arreglos dinámicos	RAII, modularidad
-3	Polinomios	Vectores dinámicos	Herencia, composición
-4	Complejos	Formas binomial/polar	Operadores, conversión
-5	Polinomios compuestos	Clases enlazadas	Encapsulamiento, listas
-6	Juego de dominó	Clases interactivas	POO completa, flujo de control
-💾 Entrega final
+| Ejercicio | Tema central | Estructuras clave | Conceptos aplicados |
+|-----------|--------------|-------------------|---------------------|
+| 1 | Vectores 3D | Métodos miembro, operadores | Sobrecarga, encapsulamiento |
+| 2 | Matrices | Arreglos dinámicos | RAII, modularidad |
+| 3 | Polinomios | Vectores dinámicos | Herencia, composición |
+| 4 | Complejos | Formas binomial/polar | Operadores, conversión |
+| 5 | Polinomios compuestos | Clases enlazadas | Encapsulamiento, listas |
+| 6 | Juego de dominó | Clases interactivas | POO completa, flujo de control |
 
-El trabajo práctico debe ser entregado en formato digital mediante un repositorio en GitHub, con la siguiente estructura:
+
