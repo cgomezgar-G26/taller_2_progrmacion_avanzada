@@ -1,14 +1,18 @@
 
-🧮 Taller 2 - Programación Avanzada  
+# 🧮 Taller 2 - Programación Avanzada  
 Este repositorio contiene los ejercicios del **Taller 2: Programación Orientada a Objetos (POO)** en **C++**, desarrollados como parte del curso **Programación Avanzada** de la **Universidad Nacional de Colombia – Sede La Paz**, semestre **2025-2**.  
 El propósito del taller es afianzar los principios fundamentales de la POO mediante la implementación modular de clases, operadores sobrecargados y estructuras interactivas en consola.
 
 ---
 
-🎓 **Curso:** Programación Avanzada  
-👨‍🏫 **Docente:** Mauro Alonso Baquero Suárez, M. Sc. en Automatización y Control  
+## 🎓 Curso y Docente  
 
-👥 **Integrantes del grupo**
+**Curso:** Programación Avanzada  
+**Docente:** Mauro Alonso Baquero Suárez, M. Sc. en Automatización y Control  
+
+---
+
+## 👥 Integrantes del grupo  
 
 | Nombre completo | Rol | Universidad |
 |------------------|------|-------------|
@@ -18,7 +22,7 @@ El propósito del taller es afianzar los principios fundamentales de la POO medi
 
 ---
 
-## 🧩 Estructura general del taller
+## 🧩 Estructura general del taller  
 
 Cada ejercicio fue implementado en un archivo independiente con su respectiva cabecera y funciones auxiliares.  
 El proyecto completo incluye los siguientes archivos:
@@ -34,7 +38,7 @@ El proyecto completo incluye los siguientes archivos:
 └── README.md
 
 yaml
-Copiar código
+
 
 ---
 
